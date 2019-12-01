@@ -11,6 +11,7 @@ class DAO {
 
     static addMessage(message) {
         message.ownerId = Session.getOrCreateSessionUserId();
+        message.creationTime = new Date().getTime();
         DAO.messagesDb.post(message)
     }
 

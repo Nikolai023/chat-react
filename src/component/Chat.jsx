@@ -12,14 +12,22 @@ class Chat extends Component {
         }
     }
 
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     componentDidMount() {
-        DAO.getAllMessages()
-            .then((docs) => docs.rows.map((row) => row.doc))
-            .then(messages => {
-                this.setState({
-                    messages: messages
-                })
-            })
+        this.interval = setInterval(() =>
+                DAO.getAllMessages()
+                    .then((docs) => docs.rows.map((row) => row.doc))
+                    .then(messages => messages.sort((a, b) => a.creationTime - b.creationTime))
+                    .then(messages => {
+                        this.setState({
+                            messages: messages
+                        });
+                    }),
+            100
+        );
     }
 
     renderSubs() {
