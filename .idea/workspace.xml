@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cc11c518-f842-44bd-a342-d1eeed6ac73d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Chat.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DAO.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DAO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/session/Session.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/session/Session.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/DB.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575177999001</updated>
       <workItem from="1575178000632" duration="6188000" />
-      <workItem from="1575198970848" duration="17465000" />
+      <workItem from="1575198970848" duration="19046000" />
     </task>
     <task id="LOCAL-00001" summary="chat">
       <created>1575217717858</created>
@@ -92,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575217717858</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="addet creationTime and sorting. Also added (not) valid id generation">
+      <created>1575219340143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575219340143</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +105,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chat" />
-    <option name="LAST_COMMIT_MESSAGE" value="chat" />
+    <MESSAGE value="addet creationTime and sorting. Also added (not) valid id generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="addet creationTime and sorting. Also added (not) valid id generation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575182744903">
@@ -111,10 +117,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="831" y="148" width="634" height="595" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1575210793140" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1575217712857">
+    <state x="589" y="0" key="CommitChangelistDialog2" timestamp="1575219338333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1575217712857" />
+    <state x="589" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1575219338333" />
     <state width="457" height="466" key="DebuggerActiveHint" timestamp="1575215064041">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -187,10 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575182652195" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1575217722190">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1575219343049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1575217722190" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1575219343049" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575209939089">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
