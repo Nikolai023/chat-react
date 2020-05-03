@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Session from "../session/Session";
 import DAO from "../dao/DAO";
 
@@ -15,7 +15,7 @@ class ChatMessage extends Component {
         let isMyMessage = messageOwnerId === myId;
         let className = "chat-message" + (!isMyMessage ? ' chat-message__left' : '');
         let messageContent = this.message.content;
-            let deleteButton = (
+        let deleteButton = (
             isMyMessage
                 ? <button className="chat-message-button"
                           type="button"

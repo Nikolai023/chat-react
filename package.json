@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "pouchdb": "^7.1.1",
+    "pouchdb-adapter-memory": "^7.1.1",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.4.1",
     "react-socket-io": "^0.2.5",
     "react-socket-io-client": "^1.1.1",
-    "socket.io-client": "^2.3.0",
-    "prop-types": "^15.7.2",
-    "pouchdb": "^7.1.1",
-    "pouchdb-adapter-memory": "^7.1.1"
+    "socket.io-client": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
