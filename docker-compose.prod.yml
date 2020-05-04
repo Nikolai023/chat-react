@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   chat-react-prod:
+    image: vkoval1996/chat-react
     container_name: chat-react
     build:
       context: .
