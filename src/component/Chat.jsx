@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, {Component} from "react";
 import ChatMessage from "./ChatMessage";
 import SendMessageForm from "./SendMessageForm";
 import DAO from "../dao/DAO";
@@ -25,6 +25,9 @@ class Chat extends Component {
                         this.setState({
                             messages: messages
                         });
+                    })
+                    .then(() => {
+                        window.scrollBy(0, document.body.scrollHeight);
                     }),
             100
         );
@@ -32,9 +35,7 @@ class Chat extends Component {
 
     renderSubs() {
         return this.state.messages.map(sub =>
-            <Fragment key={sub._id}>
-                <ChatMessage message={sub}/>
-            </Fragment>
+            <ChatMessage key={sub._id} message={sub}/>
         );
     }
 

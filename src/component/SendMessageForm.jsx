@@ -9,45 +9,45 @@ class SendMessageForm extends Component {
         this.state = {
             message: ''
         };
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.createMessage = this.createMessage.bind(this)
     }
 
-    handleChange(event) {
+    handleChange = (event) => {
         this.setState({ message: event.target.value });
-    }
+    };
 
-    handleSubmit(event) {
+    handleSubmit = (event)  => {
         event.preventDefault();
-    }
+    };
+
+    createMessage = () => {
+        if(this.state.message.trim() === '')
+            return;
+        this.setState({message: ''});
+        const message = {
+            ownerId: Session.sessionUser,
+            content: this.state.message
+        };
+        DAO.addMessage(message);
+    };
 
     render() {
         return (
-            <form className="chat-form" onSubmit={this.createMessage}>
+            <form className="chat-form" onSubmit={this.handleSubmit}>
                 <input className="chat-form-input"
                        aria-label="Ваше сообщение"
                        placeholder="Напишите что-нибудь"
                        value={this.state.message}
                        onChange={this.handleChange}
-                       required>
+                       >
                 </input>
                 <button className="chat-form-button"
+                        onClick={this.createMessage}
                         type="submit">
                     Отправить
                 </button>
             </form>
         )
     };
-
-    createMessage() {
-        const message = {
-            ownerId: Session.sessionUser,
-            content: this.state.message
-        };
-        DAO.addMessage(message);
-    }
 }
 
 export default SendMessageForm;
