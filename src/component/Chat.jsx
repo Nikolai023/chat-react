@@ -25,9 +25,6 @@ class Chat extends Component {
                         this.setState({
                             messages: messages
                         });
-                    })
-                    .then(() => {
-                        window.scrollBy(0, document.body.scrollHeight);
                     }),
             100
         );

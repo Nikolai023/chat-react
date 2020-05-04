@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import Session from "../session/Session";
 import DAO from "../dao/DAO";
 
@@ -12,15 +12,15 @@ class SendMessageForm extends Component {
     }
 
     handleChange = (event) => {
-        this.setState({ message: event.target.value });
+        this.setState({message: event.target.value});
     };
 
-    handleSubmit = (event)  => {
+    handleSubmit = (event) => {
         event.preventDefault();
     };
 
     createMessage = () => {
-        if(this.state.message.trim() === '')
+        if (this.state.message.trim() === '')
             return;
         this.setState({message: ''});
         const message = {
@@ -28,6 +28,10 @@ class SendMessageForm extends Component {
             content: this.state.message
         };
         DAO.addMessage(message);
+        setTimeout(() => {
+            window.scrollBy(0, document.body.scrollHeight);
+        }, 100)
+
     };
 
     render() {
@@ -38,7 +42,7 @@ class SendMessageForm extends Component {
                        placeholder="Напишите что-нибудь"
                        value={this.state.message}
                        onChange={this.handleChange}
-                       >
+                >
                 </input>
                 <button className="chat-form-button"
                         onClick={this.createMessage}
