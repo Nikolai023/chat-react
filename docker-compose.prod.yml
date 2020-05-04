@@ -8,8 +8,6 @@ services:
       dockerfile: Dockerfile.prod
     ports:
       - 1337:80
-#    stdin_open: true
-#    tty: true
 
   couchdb-prod:
     container_name: couchdb
@@ -21,7 +19,7 @@ services:
       - 5984:5984
     volumes:
       - couchdb_data:/couchdb
-      - ~/couchdb:/opt/couchdb/etc/local.d
+      - ./couchdb:/opt/couchdb/etc/local.d
 
 volumes:
   couchdb_data:
