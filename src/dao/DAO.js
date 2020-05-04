@@ -2,11 +2,14 @@ import PouchDB from 'pouchdb';
 import Session from "../session/Session";
 
 class DAO {
-    static messagesDb = new PouchDB('http://localhost:5984/messages');
-    static usersDb = new PouchDB('http://localhost:5984/users');
+    static USER_NAME = "admin";
+    static USER_PASSWORD = "password"
+
+    static messagesDb = new PouchDB(`http://${DAO.USER_NAME}:${DAO.USER_PASSWORD}@localhost:5984/messages`);
+    static usersDb = new PouchDB(`http://${DAO.USER_NAME}:${DAO.USER_PASSWORD}@localhost:5984/users`);
 
     static getAllMessages() {
-        return DAO.messagesDb.allDocs({ include_docs: true, descending: true });
+        return DAO.messagesDb.allDocs({include_docs: true, descending: true});
     }
 
     static addMessage(message) {
